@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class=" d-flex h-100 w-100 flex-column">
+    
+    <div class=" d-flex justify-content-center align-items-center h-100 w-100 flex-column mt-5">
+        <h1 class="display-4">Welcome</h1>
+        <div class="d-flex flex-row w-100 align-items-center justify-content-evenly mt-5">
+            <button style="border-radius:8px" class="w-25 btn-outline-secondary"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="OrderShow">Orders</a></button>
+            <button style="border-radius:8px" class="w-25 btn-outline-secondary"><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="StaffShow">Staffs</a></button>
+        </div>
+       
+    </div>
+   
+</div>

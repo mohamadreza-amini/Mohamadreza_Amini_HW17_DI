@@ -1,0 +1,50 @@
+﻿@model System.Collections.Generic.List<Core.Entites.Staff>
+
+<form asp-controller="Home" asp-action="StaffShow" method="post">
+     <div class="d-flex justify-content-center">
+        <div class="form-inline p-1 d-flex col-md-4">
+            <label class="py-2 px-1"  for="staffId">staff_id:</label>
+            <input class="form-control" placeholder="staff id" type="number" name="staffId"  />
+        </div>
+        <div class="d-flex p-1 d-flex col-md-4">
+            <label class="py-2 px-1" for="storeName">store_name:</label>
+            <input class="form-control" placeholder="store name" type="text" name="storeName"  />
+        </div>
+       
+        <input type="submit" class="btn btn-outline-dark m-1 " value="submit"/>
+    </div>  
+</form>
+
+<table>
+    <table class="table table-striped table-hover">
+        <thead>
+            <tr>
+                <th>staff_id</th>
+                <th>first_name</th>
+                <th>last_name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>store_id</th>
+                <th>store_name</th>
+                <th>manager</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var staff in Model)
+            {
+                <tr>
+                    <th>@staff.StaffId</th>
+                    <td>@staff.FirstName</td>
+                    <td>@staff.LastName</td>
+                    <td>@staff.Email</td>
+                    <td>@staff.Phone</td>
+                    <td>@staff.StoreId</td>
+                    <td>@staff.StoreName</td>
+                    <td>@staff.Manager</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</table>
